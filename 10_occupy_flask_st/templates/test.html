@@ -1,0 +1,32 @@
+<!--Duckers - Daniel Gelfand and Sophia Xu
+SoftDev1 pd<6>
+K<10> -- Jinja Tuning
+2018-09-24-->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title> Occupations with % </title>
+</head>
+
+<body>
+
+<h1> Table with Occupations and Corresponding Percentages </h1>
+
+<h2> {{randJob}} </h2>
+<table border="1">
+
+{% for item in collection %}
+<!-- Making rows in table -->
+  <tr>
+  <td> {{item}} </td>
+  <td> {{collection.get(item)}} </td> <!-- Gets value of key -->
+  </tr>
+{% endfor %}
+</table>
+
+</body>
+
+</html>

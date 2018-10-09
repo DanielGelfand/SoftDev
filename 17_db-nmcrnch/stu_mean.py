@@ -90,8 +90,8 @@ def fillTable():
         print("Name:",name[0])
         print("AVG:",getAvg(i))
         '''******************************************'''
-        command = "INSERT INTO peeps_avg VALUES({},{})".format(i,getAvg(i))
-        c.execute(command)
+        params = (i, getAvg(i))
+        c.execute("INSERT INTO peeps_avg VALUES (?,?)", params)
 
 
 fillTable()

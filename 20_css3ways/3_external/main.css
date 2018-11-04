@@ -1,0 +1,54 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1, h2, h3 {
+  color: black;
+}
+
+li {
+    color: darkgrey;
+    text-color: white;
+    padding-left:0px;
+    text-align:left
+}
+h1{
+  color:white;
+  text-align:center;
+}
+
+.footer {
+  padding: 10px 5px;
+  width: auto;
+  background-color: grey;
+  text-align: right;
+}
+
+.content {
+  position:relative;
+  width: 60vw;
+  top:12px;
+  overflow: hidden;
+}
+#wrapper{
+  margin:0px;
+  background-color: darkgrey;
+}
+
+#header{
+  background-color: lightgrey;
+  position: sticky;
+  top: 0;
+}
+
+#nav{
+  vw:30;
+  height: auto;
+  float: left;
+  position:relative;
+  margin-top:20px;
+  margin-right: 20px;
+  padding-top: 0px; margin-left:5px;
+  text-align:center;
+}

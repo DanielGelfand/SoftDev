@@ -13,12 +13,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    response = urlopen('https://api.nasa.gov/planetary/earth/imagery/?lon=100&lat=1.5&date=2014-02-01&cloud_score=True&api_key=1kroc6na8JoAYea53lF84EyY8jhmQeL131ptzFBv')
+    response = urlopen('https://api.nasa.gov/planetary/apod?date=2017-11-13&api_key=1kroc6na8JoAYea53lF84EyY8jhmQeL131ptzFBv')
     data = response.read()
     #print(raw)
     dict = json.loads(data.decode('utf-8'))
     print(dict)
-    return render_template('index.html', pic=dict['url'])
+    return render_template('index.html', desc = dict['title'] ,pic=dict['url'])
 
 if __name__ == '__main__':
     app.debug=True

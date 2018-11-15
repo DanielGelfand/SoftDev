@@ -23,9 +23,9 @@ def home():
 def airAPI():
     response = urlopen('https://api.airvisual.com/v2/nearest_city?key=CFqWqyRLZJMMiwDr9')
     data = response.read()
-    dict = json.loads(data)
-    #print(dict)
-    return render_template('air.html', city=dict['data']['city'], weather = dict['data']['current']['weather'])
+    dict = json.loads(data.decode('utf-8'))
+    print(dict)
+    return render_template('air.html', city=dict['data']['city'],state=dict['data']['state'] ,weather = dict['data']['current']['weather'])
 
 @app.route('/advice')
 def advice():

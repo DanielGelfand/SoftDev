@@ -7,7 +7,7 @@
   <body>
 
 
-    <h1> {{city}} -- Nearest City To Current City</h1>
+    <h1> {{city}},{{state}} -- Nearest City </h1>
       {% for item in weather %}
         <p> {{item}} - {{weather.get(item)}} </p>
       {% endfor %}

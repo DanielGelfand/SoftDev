@@ -5,8 +5,8 @@ K#25 -- Getting More REST
 2018-11-15 R
 '''
 
-from flask import Flask, render_template
 import json
+from flask import Flask, render_template
 from urllib.request import urlopen
 
 app = Flask(__name__)
@@ -18,11 +18,12 @@ def home():
     #print(data)
     dict = json.loads(data.decode('utf-8'))
 
-    response1 = urlopen('https://api.airvisual.com/v2/nearest_city?key=CFqWqyRLZJMMiwDr9')
+    response1 = urlopen('https://api.adviceslip.com/advice')
+    print(response1)
     data1 = response1.read()
-    dict1 = json.loads(data1)
+    dict1 = json.loads(data1.decode('utf-8'))
     #print(dict1)
-    return render_template('index.html', desc = dict['title'] ,pic=dict['url'], city=dict1['data']['city'], weather = dict1['data']['current']['weather'])
+    return render_template('index.html', desc = dict['title'] ,pic=dict['url'], advice=dict1['slip']['advice'])
 
 if __name__ == '__main__':
     app.debug=True

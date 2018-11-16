@@ -1,8 +1,8 @@
 '''
 Daniel Gelfand
 SoftDev1 pd6
-K#25 -- Getting More REST
-2018-11-15 R
+K#26 -- Getting More REST
+2018-11-16 F
 '''
 
 import json
